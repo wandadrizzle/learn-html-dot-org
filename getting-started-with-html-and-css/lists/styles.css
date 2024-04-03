@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.full-height {
+    height: 100vh;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+}
+
+    .full-height:nth-child(odd) {
+        background-color: lightgreen;
+    }
+
+    .full-height:nth-child(even) {
+        background-color: lightblue;
+    }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+    /* Tooltip text */
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 30vw;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+.flower-bullet ul {
+    list-style-type: none; 
+}
+
+.flower-bullet li {
+    position: relative; 
+}
+
+/* Style for the SVG bullet - Danko ChatGPT*/
+.flower-bullet li::before {
+    content: ""; /* Empty content to add bullet */
+    width: 12px; /* Width of the SVG */
+    height: 12px; /* Height of the SVG */
+    background-image: url('/assets/periwinkle.svg'); /* URL of the SVG */
+    background-size: cover; /* Make the SVG cover the whole space */
+    position: absolute; /* Position the bullet absolutely */
+    left: -20px; /* Adjust the positioning as needed */
+    top: 50%; /* Adjust the positioning as needed */
+    transform: translateY(-50%); /* Center the bullet vertically */
+}
+
+.columns {
+    display: flex;
+    /* flex-wrap: wrap; Allow items to wrap to the next line */
+    justify-content: space-around;
+    align-items: center;
+}
+
+.columns .item {
+    flex: 1; 
+    margin: auto;
+}
+
+@font-face {
+    font-family: 'Dancing Script';
+    src: url(/fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf) format('truetype');
+}
+
+
+.style-centre {
+    color: blue;
+    text-align: center;
+}
+
+.style-centre-dark {
+    color: orange;
+    text-align: center;
+}

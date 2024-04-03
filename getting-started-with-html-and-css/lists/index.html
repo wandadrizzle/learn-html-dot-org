@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Getting Started with HTML & CSS</title>
+    <!--This is called a CSS tag-->
+    <style>
+        .style {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="full-height">
+        <h1>Getting Started with HTML & CSS</h1>
+        <h2>Lists</h2>
+        <div class="columns">
+            <div>
+                <h3>Ordered Lists:</h3>
+                <p>Here is a list of ordered items:</p>
+                <ol>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                </ol>
+                <p>Here is a list of ordered items:</p>
+                <!--I am sure you've noticed that this type is actually the default. Other values you can use are "A", "a", "I" and "i"-->
+                <div class="tooltip">
+                    <ol type="1"> 
+                        <li>First item</li>
+                        <li>Second item</li>
+                        <li>Third item</li>
+                    </ol>
+                    <span class="tooltiptext">I am sure you've noticed that this type is actually the default, made explicitly with a type attribute with the value of "1". Other values you can use are "A", "a", "I" and "i"</span>
+                </div>
+            </div>
+            <div>
+                <h3>Unordered Lists:</h3>
+                <p>Here is a list of unordered items:</p> 
+                <div class="tooltip">  
+                    <ul style="list-style-type: disc">
+                        <li>First item</li>
+                        <li>Second item</li>
+                        <li>Third item</li>
+                    </ul>
+                    <span class="tooltiptext">To style unordered lists you have to do it as follows - style="list-style-type: value". "disc" is the default but you can also use "circle", "square", and "none". If you're feeling spicy you can use list-style-image</span>
+                </div> 
+                <p>Here is a list of unordered items:</p> 
+                <div class="flower-bullet">  
+                    <ul>
+                        <li>First item</li>
+                        <li>Second item</li>
+                        <li>Third item</li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="full-height">
+        <h2>Images</h2>
+        <div class="columns">
+            <div class="item">
+                <h3>An image with alt attribute:</h3>
+                <img src="/assets/focused.jpg" alt="a picture of focused girl with laptop" style="width: 20vw" onload="alert('Image of focused girl loaded')">
+            </div>
+            <div class="item">
+                <h3>Working with floats:</h3>
+                <img src="/assets/rome.jpg" alt="a picture of the Colosseum" style="width: 20vw;float: left; margin-right: 10px;">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolore ullam vitae? Tempore blanditiis quisquam porro aliquid quia ipsa voluptate assumenda veritatis vero! Sed assumenda deserunt nam distinctio dolorum mollitia!</p>
+                <p style="clear: both">Second paragraph</p>
+            </div>
+        </div>
+    </div>
+    <div class="full-height style-centre">
+        <h2 class="style">Styles</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores architecto porro possimus distinctio, voluptas amet perferendis iusto, doloribus, ea vero dolore. Soluta eius animi consequuntur tenetur inventore velit omnis vel!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores architecto porro possimus distinctio, voluptas amet perferendis iusto, doloribus, ea vero dolore. Soluta eius animi consequuntur tenetur inventore velit omnis vel!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores architecto porro possimus distinctio, voluptas amet perferendis iusto, doloribus, ea vero dolore. Soluta eius animi consequuntur tenetur inventore velit omnis vel!</p>
+        <p id="font">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores architecto porro possimus distinctio, voluptas amet perferendis iusto, doloribus, ea vero dolore. Soluta eius animi consequuntur tenetur inventore velit omnis vel!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores architecto porro possimus distinctio, voluptas amet perferendis iusto, doloribus, ea vero dolore. Soluta eius animi consequuntur tenetur inventore velit omnis vel!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores architecto porro possimus distinctio, voluptas amet perferendis iusto, doloribus, ea vero dolore. Soluta eius animi consequuntur tenetur inventore velit omnis vel!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores architecto porro possimus distinctio, voluptas amet perferendis iusto, doloribus, ea vero dolore. Soluta eius animi consequuntur tenetur inventore velit omnis vel!</p>
+        <button onclick="changeMode()">CHANGE MODE</button>
+    </div>
+    <div class="full-height">
+        <h2>Selectors</h2>
+    </div>
+    <script>
+        var specialFont =  document.getElementById("font");
+        specialFont.style.fontFamily = 'Dancing Script';
+
+        function changeMode() {
+            var blocks = document.getElementsByClassName("style-centre");
+            for (var i = 0; i < blocks.length; i++) {
+                blocks[i].classList.remove("style-centre");
+                //blocks[i].classList.toggle("style-centre-dark");
+                if (!blocks[i].classList.contains("style-centre-dark")) {
+                    blocks[i].classList.add("style-centre-dark");
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
